@@ -4,15 +4,13 @@
 #
 Name     : R-rgeos
 Version  : 0.4.2
-Release  : 3
+Release  : 4
 URL      : https://cran.r-project.org/src/contrib/rgeos_0.4-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgeos_0.4-2.tar.gz
 Summary  : Interface to Geometry Engine - Open Source ('GEOS')
 Group    : Development/Tools
 License  : GPL-2.0+ LGPL-2.1
 Requires: R-rgeos-lib = %{version}-%{release}
-Requires: R-XML
-Requires: R-maptools
 BuildRequires : R-XML
 BuildRequires : R-maptools
 BuildRequires : R-sp
@@ -39,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551891146
+export SOURCE_DATE_EPOCH=1552811683
 
 %install
-export SOURCE_DATE_EPOCH=1551891146
+export SOURCE_DATE_EPOCH=1552811683
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -78,8 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library rgeos|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  rgeos || :
 
 
 %files
@@ -106,11 +103,65 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/rgeos/help/rgeos.rdx
 /usr/lib64/R/library/rgeos/html/00Index.html
 /usr/lib64/R/library/rgeos/html/R.css
-/usr/lib64/R/library/rgeos/libs/symbols.rds
 /usr/lib64/R/library/rgeos/poly-ex-gpc/ex-poly1.txt
 /usr/lib64/R/library/rgeos/poly-ex-gpc/ex-poly2.txt
 /usr/lib64/R/library/rgeos/poly-ex-gpc/hole-poly.txt
 /usr/lib64/R/library/rgeos/test_cases/polys.RData
+/usr/lib64/R/library/rgeos/tests/leak_by_exception.R
+/usr/lib64/R/library/rgeos/tests/leak_by_exception.Rout.save
+/usr/lib64/R/library/rgeos/tests/test-all.R
+/usr/lib64/R/library/rgeos/tests/testthat/process_testxml.R
+/usr/lib64/R/library/rgeos/tests/testthat/test-jts-xml.R
+/usr/lib64/R/library/rgeos/tests/testthat/test-linearref.R
+/usr/lib64/R/library/rgeos/tests/testthat/test-misc.R
+/usr/lib64/R/library/rgeos/tests/testthat/test-translate-empty.R
+/usr/lib64/R/library/rgeos/tests/testthat/test-translate-lines.R
+/usr/lib64/R/library/rgeos/tests/testthat/test-translate-points.R
+/usr/lib64/R/library/rgeos/tests/testthat/test-translate-polygon-collection.R
+/usr/lib64/R/library/rgeos/tests/testthat/test-translate-polygons.R
+/usr/lib64/R/library/rgeos/tests/testthat/test-translate-rings.R
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestBoundary.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestCentroid.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestConvexHull-big.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestConvexHull.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionAA.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionAAPrec.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionLA.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionLAPrec.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionLL.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionLLPrec.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionPA.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionPL.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionPLPrec.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestFunctionPP.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestInteriorPoint.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestRectanglePredicate.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestRelateAA.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestRelateAC.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestRelateLA.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestRelateLC.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestRelateLL.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestRelatePA.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestRelatePL.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestRelatePP.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestSimple.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestValid.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestValid2-big.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestValid2.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/general/TestWithinDistance.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/robust/ExternalRobustness.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/robust/TestRobustOverlayFixed.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/robust/TestRobustOverlayFloat.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/robust/TestRobustRelate.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/validate/TestRelateAA-big.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/validate/TestRelateAA.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/validate/TestRelateAC.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/validate/TestRelateLA.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/validate/TestRelateLC.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/validate/TestRelateLL.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/validate/TestRelatePA.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/validate/TestRelatePL.xml
+/usr/lib64/R/library/rgeos/tests/testthat/testxml/validate/TestRelatePP.xml
 /usr/lib64/R/library/rgeos/wkts/sline1.wkt
 /usr/lib64/R/library/rgeos/wkts/sline2.wkt
 /usr/lib64/R/library/rgeos/wkts/sppsp.wkt
