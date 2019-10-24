@@ -4,21 +4,20 @@
 #
 Name     : R-rgeos
 Version  : 0.5.2
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/rgeos_0.5-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgeos_0.5-2.tar.gz
 Summary  : Interface to Geometry Engine - Open Source ('GEOS')
 Group    : Development/Tools
 License  : GPL-2.0+ LGPL-2.1
 Requires: R-rgeos-lib = %{version}-%{release}
-Requires: R-XML
-Requires: R-maptools
 Requires: R-sp
 BuildRequires : R-XML
 BuildRequires : R-maptools
 BuildRequires : R-sp
 BuildRequires : buildreq-R
 BuildRequires : geos-dev
+BuildRequires : util-linux
 
 %description
 For OSX Mavericks+, Bill Behrman suggests:
@@ -40,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570110733
+export SOURCE_DATE_EPOCH=1571889925
 
 %install
-export SOURCE_DATE_EPOCH=1570110733
+export SOURCE_DATE_EPOCH=1571889925
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
