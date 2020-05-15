@@ -4,18 +4,14 @@
 #
 Name     : R-rgeos
 Version  : 0.5.3
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/rgeos_0.5-3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgeos_0.5-3.tar.gz
 Summary  : Interface to Geometry Engine - Open Source ('GEOS')
 Group    : Development/Tools
 License  : GPL-2.0+ LGPL-2.1
 Requires: R-rgeos-lib = %{version}-%{release}
-Requires: R-XML
-Requires: R-maptools
 Requires: R-sp
-BuildRequires : R-XML
-BuildRequires : R-maptools
 BuildRequires : R-sp
 BuildRequires : buildreq-R
 BuildRequires : geos-dev
@@ -41,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589222005
+export SOURCE_DATE_EPOCH=1589577233
 
 %install
-export SOURCE_DATE_EPOCH=1589222005
+export SOURCE_DATE_EPOCH=1589577233
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
