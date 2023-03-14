@@ -4,7 +4,7 @@
 #
 Name     : R-rgeos
 Version  : 0.6.2
-Release  : 42
+Release  : 43
 URL      : https://cran.r-project.org/src/contrib/rgeos_0.6-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgeos_0.6-2.tar.gz
 Summary  : Interface to Geometry Engine - Open Source ('GEOS')
@@ -17,9 +17,6 @@ BuildRequires : R-XML
 BuildRequires : R-sp
 BuildRequires : buildreq-R
 BuildRequires : geos-dev
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 For OSX Mavericks+, Bill Behrman suggests:
@@ -51,10 +48,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1677778863
+export SOURCE_DATE_EPOCH=1678837007
 
 %install
-export SOURCE_DATE_EPOCH=1677778863
+export SOURCE_DATE_EPOCH=1678837007
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-rgeos
 cp %{_builddir}/rgeos/LICENSE.note %{buildroot}/usr/share/package-licenses/R-rgeos/7ee2be10bbfaa8b2c17d709642bdbc2113f11d8d || :
