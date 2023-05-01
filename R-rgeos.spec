@@ -4,7 +4,7 @@
 #
 Name     : R-rgeos
 Version  : 0.6.2
-Release  : 44
+Release  : 45
 URL      : https://cran.r-project.org/src/contrib/rgeos_0.6-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgeos_0.6-2.tar.gz
 Summary  : Interface to Geometry Engine - Open Source ('GEOS')
