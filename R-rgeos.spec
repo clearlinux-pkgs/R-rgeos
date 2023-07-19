@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-rgeos
-Version  : 0.6.3
-Release  : 47
-URL      : https://cran.r-project.org/src/contrib/rgeos_0.6-3.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/rgeos_0.6-3.tar.gz
+Version  : 0.6.4
+Release  : 48
+URL      : https://cran.r-project.org/src/contrib/rgeos_0.6-4.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/rgeos_0.6-4.tar.gz
 Summary  : Interface to Geometry Engine - Open Source ('GEOS')
 Group    : Development/Tools
 License  : GPL-2.0+ LGPL-2.1
@@ -51,10 +51,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685647370
+export SOURCE_DATE_EPOCH=1689784514
 
 %install
-export SOURCE_DATE_EPOCH=1685647370
+export SOURCE_DATE_EPOCH=1689784514
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-rgeos
 cp %{_builddir}/rgeos/LICENSE.note %{buildroot}/usr/share/package-licenses/R-rgeos/7ee2be10bbfaa8b2c17d709642bdbc2113f11d8d || :
